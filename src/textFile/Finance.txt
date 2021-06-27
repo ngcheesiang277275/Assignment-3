@@ -1,0 +1,4 @@
+Total Revenue	:27000.50
+Employee Salary	:11300.00
+Other Expenses	:5000
+Net Profit	:10700.50

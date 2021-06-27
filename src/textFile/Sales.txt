@@ -1,0 +1,8 @@
+Name		:as
+Email		:as
+Contact Num	:as
+---------------
+Homestay Name	:Orchid Suite
+Nights to stay	:4
+Total price		:RM246.60
+Booking Status	: Transaction in Progress.

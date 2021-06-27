@@ -1,8 +1,10 @@
-Name		:as
-Email		:as
-Contact Num	:as
+Name		:JIMMY
+Email		:jimmy@gmail.com
+Contact Num	:012-3330002
 ---------------
-Homestay Name	:Orchid Suite
-Nights to stay	:4
-Total price		:RM246.60
+Homestay Name	:Magic Studio
+Date to Stay In	:02/JAN/2022
+Nights to Stay	:3
+Number of Guest	:4
+Total price		:RM264.60
 Booking Status	: Transaction in Progress.

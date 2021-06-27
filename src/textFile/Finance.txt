@@ -1,4 +1,5 @@
-Total Revenue	:27000.50
+Total Revenue	:35000.00
 Employee Salary	:11300.00
 Other Expenses	:5000
-Net Profit	:10700.50
+Total Sponsorship	:2500.00
+Net Profit	:21200.00

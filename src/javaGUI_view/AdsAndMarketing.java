@@ -97,18 +97,17 @@ public class AdsAndMarketing extends JPanel {
 		flyer_HomestayPreview.add(pic_flyerPreview);
 		
 		JComboBox comboBox_Flyer = new JComboBox();
+		comboBox_Flyer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!comboBox_Flyer.getSelectedItem().equals("Select Flyer")) 
+					tabbedPane.setSelectedIndex(comboBox_Flyer.getSelectedIndex()-1);
+			}
+		});
 		comboBox_Flyer.setModel(new DefaultComboBoxModel(new String[] {"Select Flyer", "No Flyer (Normal Cover)", "Facilities Boost Poster", "Homestay Preview"}));
 		comboBox_Flyer.setFont(new Font("Malgun Gothic Semilight", Font.PLAIN, 20));
 		comboBox_Flyer.setBackground(Color.WHITE);
 		comboBox_Flyer.setBounds(174, 142, 310, 33);
 		add(comboBox_Flyer);
-		
-		if(comboBox_Flyer.getSelectedItem().equals("No Flyer (Normal Cover)"))
-			this.flyerNumber = 0;
-		else if(comboBox_Flyer.getSelectedItem().equals("Facilities Boost Poster"))
-			this.flyerNumber = 1;
-		else if(comboBox_Flyer.getSelectedItem().equals("Homestay Preview"))
-			this.flyerNumber = 2;
 		
 		JButton btnSelectFlyer = new JButton("Select Flyer");
 		btnSelectFlyer.addActionListener(new ActionListener() {
@@ -128,7 +127,6 @@ public class AdsAndMarketing extends JPanel {
 						JOptionPane.showMessageDialog(btnSelectFlyer,
 								comboBox_Flyer.getSelectedItem() + "Please select a flyer first.");
 					setFlyerNumber(this.flyerNumber);
-					getFlyerNumber();
 					if(!comboBox_Flyer.getSelectedItem().equals("Select Flyer")) 
 					JOptionPane.showMessageDialog(btnSelectFlyer,
 							comboBox_Flyer.getSelectedItem() + "\nwill be used to promote your homestay.");

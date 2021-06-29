@@ -350,9 +350,9 @@ public class SalesSystem extends JFrame {
 		btn_Inquiries_1.setBounds(10, 471, 200, 50);
 		panel_BookingDetails.add(btn_Inquiries_1);
 		
-		JLabel lbl_PPN_1 = new JLabel("*10% off for 3 nights or more");
+		JLabel lbl_PPN_1 = new JLabel("<html>*10% off for 3 nights<br/> or more</html>");
 		lbl_PPN_1.setFont(new Font("Malgun Gothic Semilight", Font.PLAIN, 20));
-		lbl_PPN_1.setBounds(549, 201, 197, 25);
+		lbl_PPN_1.setBounds(549, 201, 197, 50);
 		panel_BookingDetails.add(lbl_PPN_1);
 		
 		JLabel bg_BookingDetails = new JLabel("");
@@ -429,8 +429,6 @@ public class SalesSystem extends JFrame {
 		JButton btnBook = new JButton("Book");
 		btnBook.setBackground(new Color(245, 245, 245));
 		btnBook.addActionListener(new ActionListener() {
-			double totalRevenue;
-
 			public void actionPerformed(ActionEvent e) {
 				String cardNumber = txt_CardNumber.getText();
 				String exp_mm = txt_EXP_MM.getText();
@@ -449,7 +447,7 @@ public class SalesSystem extends JFrame {
 								("ALL DONE!!!\nThe Booking will be processsed.\nTransaction will be done within 3 days\nWe will update your booking status via email"));
 						dispose();
 						AdsAndMarketing ads = new AdsAndMarketing();
-						Login log = new Login(ads.getFlyerNumber());
+						Login log = new Login(ads.getFlyerNumber(), totalRevenue);
 						log.setVisible(true);
 					}
 				}

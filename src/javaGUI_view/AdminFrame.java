@@ -55,7 +55,9 @@ public class AdminFrame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdminFrame() {
+	public AdminFrame() {}
+	
+	public AdminFrame(double b) {
 		setTitle("Administration");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(AdminFrame.class.getResource("/bg_Resource/hotel_icon-removebg-preview.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,7 +78,7 @@ public class AdminFrame extends JFrame {
 		InventoryManagement invtMgmt = new InventoryManagement();
 		layeredPane.add(invtMgmt, "name_296877169628700");
 				
-		Finance finance = new Finance(employee.getTotalSalary());
+		Finance finance = new Finance(employee.getTotalSalary(), b);
 		layeredPane.add(finance, "name_296878934031700");
 		
 		AdsAndMarketing ads = new AdsAndMarketing();
@@ -108,7 +110,7 @@ public class AdminFrame extends JFrame {
 		btnFinance.setBackground(new Color(245, 245, 245));
 		btnFinance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Finance newFinance = new Finance(employee.getTotalSalary());
+				Finance newFinance = new Finance(employee.getTotalSalary(), b);
 				switchPanelTo(newFinance);
 			}
 		});
@@ -134,7 +136,7 @@ public class AdminFrame extends JFrame {
 				JFrame frame = new JFrame();
 				if (JOptionPane.showConfirmDialog(frame, "Go Back to Login Page??", "Administration", 
 						JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
-					Login newLogin = new Login(ads.getFlyerNumber());
+					Login newLogin = new Login(ads.getFlyerNumber(), b);
 					dispose();
 					newLogin.setVisible(true);
 				}

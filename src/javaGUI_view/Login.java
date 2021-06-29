@@ -61,7 +61,8 @@ public class Login extends JFrame {
 			public void run() {
 				try {
 					AdsAndMarketing ads = new AdsAndMarketing();
-					Login frame = new Login(ads.getFlyerNumber());
+					SalesSystem sal = new SalesSystem();
+					Login frame = new Login(ads.getFlyerNumber(), sal.getTotalRevenue());
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -81,8 +82,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	
-	public Login(int a) {
-
+	public Login(int a, double b) {		
 		setTitle("Bona Fide Homestay Rental System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/bg_Resource/hotel_icon-removebg-preview.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -204,7 +204,7 @@ public class Login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if ((txtUsername.getText().equals("Spongebob")) && (passwordField.getText().equals("277275"))) {
 					JOptionPane.showMessageDialog(btnAdminLogin, ("\nADMIN \"" + txtUsername.getText() + "\" LOG IN SUCCESSFULLY!"));
-					AdminFrame admin = new AdminFrame();
+					AdminFrame admin = new AdminFrame(b);
 					admin.setVisible(true);
 					switchPanelTo(layeredPane, panel_role);
 					txtUsername.setText("");

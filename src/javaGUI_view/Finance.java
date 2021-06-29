@@ -26,7 +26,7 @@ public class Finance extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public Finance(double employeeSalary) {
+	public Finance(double employeeSalary, double revenue) {
 		setLayout(null);
 
 		JLabel totalRevenueLabel = new JLabel("Total Revenue");
@@ -107,7 +107,7 @@ public class Finance extends JPanel {
 		lbl_TotalEmployeeSalary.setBounds(712, 202, 183, 25);
 		add(lbl_TotalEmployeeSalary);
 		
-		totalRevenue = 35000.00;
+		totalRevenue = revenue;
 		
 		lbl_TotalRevenue = new JLabel(String.format("%.2f", totalRevenue));
 		lbl_TotalRevenue.setFont(new Font("Malgun Gothic Semilight", Font.PLAIN, 27));
@@ -129,9 +129,9 @@ public class Finance extends JPanel {
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {																//2.2 Exception Handling
-				otherExpense = Double.parseDouble(txt_OtherExpense.getText());
-				double netProfit = Double.parseDouble(lbl_TotalRevenue.getText()) + totalSponsorship - Double.parseDouble(lbl_TotalEmployeeSalary.getText()) - Double.parseDouble(txt_OtherExpense.getText());
-				lbl_NetProfit.setText(String.format("%.2f",netProfit));
+					otherExpense = Double.parseDouble(txt_OtherExpense.getText());
+					double netProfit = Double.parseDouble(lbl_TotalRevenue.getText()) + totalSponsorship - Double.parseDouble(lbl_TotalEmployeeSalary.getText()) - Double.parseDouble(txt_OtherExpense.getText());
+					lbl_NetProfit.setText(String.format("%.2f",netProfit));
 				}catch(Exception e1) {
 					JOptionPane.showMessageDialog(null, "Invalid Input for \"Other Expense\".\nPlease try again.");
 				}

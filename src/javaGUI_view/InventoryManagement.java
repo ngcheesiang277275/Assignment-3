@@ -179,9 +179,9 @@ public class InventoryManagement extends JPanel {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"Orchid Suite", "68.50", "3", "6"},
-				{"Magic Studio", "98.00", "4", "6"},
-				{"Diamond House", "112.50", "3", "6"},
+				{"Orchid Suite", "168.50", "3", "6"},
+				{"Magic Studio", "198.00", "4", "6"},
+				{"Diamond House", "282.50", "3", "6"},
 			},
 			new String[] {
 				"Hostel Name", "Price Per Night (RM)", "Num of Bed(s)", "Max Guest(s)"

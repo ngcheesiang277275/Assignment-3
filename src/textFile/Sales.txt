@@ -1,10 +1,10 @@
-Name		:JIMMY
+Name		:Jimmy
 Email		:jimmy@gmail.com
-Contact Num	:012-3330002
+Contact Num	:011-22203333
 ---------------
-Homestay Name	:Magic Studio
-Date to Stay In	:02/JAN/2022
-Nights to Stay	:3
-Number of Guest	:4
-Total price		:RM264.60
+Homestay Name	:Diamond House
+Date to Stay In	:07/JUL/2023
+Nights to Stay	:70
+Number of Guest	:1
+Total price		:RM17797.50
 Booking Status	: Transaction in Progress.
